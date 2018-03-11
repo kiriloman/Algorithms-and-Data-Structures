@@ -1,4 +1,4 @@
-package main.java.com.github.kiriloman.sorting;
+package com.github.kiriloman.sorting;
 
 /*
  * Given an Integer array order it using QuickSort algorithm.
@@ -19,7 +19,7 @@ package main.java.com.github.kiriloman.sorting;
 public class QuickSort {
 
     public Integer[] sort(Integer[] array) {
-
-        return null;
+        Integer[] ar = {1,2,3};
+        return ar;
     }
 }
