@@ -7,7 +7,7 @@ public class ArrayTest {
 
     @Before
     public void setUp() {
-        array = new Array<>();
+        this.array = new Array<>();
     }
 
     @After
