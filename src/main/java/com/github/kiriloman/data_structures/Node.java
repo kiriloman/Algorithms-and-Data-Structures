@@ -4,8 +4,8 @@ public class Node {
     private Object value;
     private Node next;
 
-    public Node() {
-        this.value = null;
+    public Node(Object value) {
+        this.value = value;
         this.next = null;
     }
 
