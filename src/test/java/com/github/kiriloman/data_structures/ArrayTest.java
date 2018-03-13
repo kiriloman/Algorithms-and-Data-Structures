@@ -15,6 +15,11 @@ public class ArrayTest {
 
     }
 
+    @Test(expected = NullPointerException.class)
+    public void whenAddingNullShouldReturnException() {
+        array.add(null);
+    }
+
     @Test
     public void whenValueIsAddedToArrayItsLengthIncrements() {
         array.add(1);
@@ -29,6 +34,11 @@ public class ArrayTest {
         Assert.assertEquals(Integer.valueOf(2), array.get(1));
     }
 
+    @Test(expected = NullPointerException.class)
+    public void whenGettingNullIndexShouldReturnException() {
+        array.get(null);
+    }
+
     @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void whenGettingValueWithNegativeIndexArrayShouldReturnException() {
         array.add(1);
@@ -36,11 +46,11 @@ public class ArrayTest {
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
-    public void whenGettingValueWithIndexLargerThanLengthArrayShouldReturnException() {
+    public void whenGettingValueWithIndexLargerOrEqualToLengthArrayShouldReturnException() {
         array.add(1);
         array.add(2);
         array.add(3);
-        array.get(5);
+        array.get(3);
     }
 
     @Test
@@ -57,7 +67,8 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenDestroyingArrayItsLengthIsZeroAndHasNoContent() {
+    public void whenDestroyingArrayItsLengthShouldBeZeroAndShouldHaveNoContent() {
+        array.add(1);
         array.destroy();
         Assert.assertEquals(0, array.length);
         Assert.assertEquals("{}", array.toString());
@@ -66,6 +77,11 @@ public class ArrayTest {
     @Test
     public void whenArrayIsDestroyedItShouldBeEmpty() {
         array.destroy();
+        Assert.assertTrue(array.isEmpty());
+    }
+
+    @Test
+    public void whenArrayIsInitializedItShouldBeEmpty() {
         Assert.assertTrue(array.isEmpty());
     }
 
@@ -84,5 +100,97 @@ public class ArrayTest {
     public void whenArrayIsNotEmptyLengthIsNotZero() {
         array.add(1);
         Assert.assertFalse(array.length == 0);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void whenRemovingNullIndexShouldReturnException() {
+        array.remove(null);
+    }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void whenRemovingNegativeIndexShouldReturnException() {
+        array.remove(-1);
+    }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void whenRemovingIndexLargerOrEqualToLengthReturnException() {
+        array.add(3);
+        array.remove(1);
+    }
+
+    @Test
+    public void whenRemovingLegalIndexTheValueIsSuccessfullyRemoved() {
+        array.add(1);
+        array.remove(0);
+        Assert.assertEquals("{}", array.toString());
+
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        array.remove(2);
+        Assert.assertEquals("{1, 2}", array.toString());
+    }
+
+    @Test
+    public void whenRemovingLegalIndexLengthShouldDecrement() {
+        array.add(1);
+        array.add(1);
+        array.add(1);
+        int l = array.length;
+        array.remove(2);
+        Assert.assertEquals(l - 1, array.length);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void whenRemovingFirstFromAnEmptyArrayReturnException() {
+        array.removeFirst();
+    }
+
+    @Test
+    public void whenRemovingFirstFromNonEmptyArrayReturnArrayWithoutFirst() {
+        array.add(1);
+        array.removeFirst();
+        Assert.assertEquals("{}", array.toString());
+
+        array.add(1);
+        array.add(2);
+        array.removeFirst();
+        Assert.assertEquals("{2}", array.toString());
+    }
+
+    @Test
+    public void whenRemovingFirstFromNonEmptyArrayLengthDecrements() {
+        array.add(1);
+        array.add(2);
+        int l = array.length;
+        array.removeFirst();
+        Assert.assertEquals(l - 1, array.length);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void whenRemovingLastFromAnEmptyArrayReturnException() {
+        array.removeLast();
+    }
+
+    @Test
+    public void whenRemovingLastFromNonEmptyArrayReturnArrayWithoutLast() {
+        array.add(1);
+        array.removeLast();
+        Assert.assertEquals("{}", array.toString());
+
+        array.add(1);
+        array.add(2);
+        array.removeLast();
+        Assert.assertEquals("{1}", array.toString());
+    }
+
+    @Test
+    public void whenRemovingLastFromNonEmptyArrayLengthDecrements() {
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        int l = array.length;
+        array.removeLast();
+        Assert.assertEquals(l - 1, array.length);
     }
 }
