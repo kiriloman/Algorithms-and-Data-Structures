@@ -17,7 +17,7 @@ public class ArrayTest {
 
     @Test(expected = NullPointerException.class)
     public void whenAddingNullShouldReturnException() {
-        array.add(null);
+        array.add((Integer) null);
     }
 
     @Test
@@ -192,5 +192,53 @@ public class ArrayTest {
         int l = array.length;
         array.removeLast();
         Assert.assertEquals(l - 1, array.length);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void whenAddingNullArrayThrowException() {
+        array.add((Array) null);
+    }
+
+    @Test
+    public void whenAddingEmptyArrayReturnOriginalArray() {
+        Array<Integer> emptyArray = new Array<>();
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        array.add(emptyArray);
+        Assert.assertEquals("{1, 2, 3}", array.toString());
+    }
+
+    @Test
+    public void whenAddingArrayLengthOfOriginalIncrementsExactlyTheLengthOfAddedArray() {
+        Array<Integer> other = new Array<>();
+        other.add(2);
+        other.add(6);
+
+        array.add(1);
+        array.add(3);
+        array.add(2);
+        array.add(other);
+        Assert.assertEquals(5, array.length);
+    }
+
+    @Test
+    public void whenAddingNonEmptyArrayToAnEmptyArrayReturnTheAddedArray() {
+        Array<Integer> other = new Array<>();
+        other.add(1);
+        other.add(2);
+        array.add(other);
+        Assert.assertEquals("{1, 2}", array.toString());
+    }
+
+    @Test
+    public void whenAddingTwoNonEmptyArraysReturnTheirUnion() {
+        Array<Integer> other = new Array<>();
+        other.add(1);
+        other.add(2);
+        array.add(5);
+        array.add(6);
+        array.add(other);
+        Assert.assertEquals("{5, 6, 1, 2}", array.toString());
     }
 }

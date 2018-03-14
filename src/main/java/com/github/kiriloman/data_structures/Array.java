@@ -1,9 +1,9 @@
 package com.github.kiriloman.data_structures;
 
-public class Array<V> {
+public class Array<T> {
+    public int length;
     private Node root;
     private Node last;
-    public int length;
 
     public Array() {
         this.root = null;
@@ -11,7 +11,23 @@ public class Array<V> {
         this.length = 0;
     }
 
-    public void add(V value) {
+    public Node getLastNode() {
+        Node aux = root;
+        while (aux.getNext() != null) {
+            aux = aux.getNext();
+        }
+        return aux;
+    }
+
+    public Node getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node root) {
+       this.root = root;
+    }
+
+    public void add(T value) {
         if (value == null) throw new NullPointerException();
         if (root == null) {
             root = new Node(value);
@@ -23,6 +39,27 @@ public class Array<V> {
             last = newNode;
         }
         length++;
+    }
+
+    public void add(Array other) {
+        if (other == null) throw new NullPointerException();
+        int otherLength = other.length;
+        if (otherLength == 0) return;
+        Node thisNode, otherNode = other.getRoot();
+        if (length == 0) {
+            root = otherNode;
+            thisNode = root;
+            otherNode = otherNode.getNext();
+        }
+        else {
+            thisNode = this.getLastNode();
+        }
+        while (otherNode.getNext() != null) {
+            thisNode.setNext(otherNode);
+            thisNode = otherNode;
+            otherNode = otherNode.getNext();
+        }
+        length += otherLength;
     }
 
     public void remove(Integer index) {
@@ -56,7 +93,7 @@ public class Array<V> {
         this.remove(length - 1);
     }
 
-    public V get(Integer index) {
+    public T get(Integer index) {
         if (index == null) throw new NullPointerException();
         if (index < 0 || index >= length) throw new ArrayIndexOutOfBoundsException();
         int counter = 0;
@@ -65,7 +102,7 @@ public class Array<V> {
             counter++;
             current = current.getNext();
         }
-        return (V) current.getValue();
+        return (T) current.getValue();
     }
 
     public void destroy() {
