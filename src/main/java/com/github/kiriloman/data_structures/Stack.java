@@ -21,6 +21,7 @@ public class Stack<T> {
     }
 
     public T pop() {
+        if (empty()) throw new EmptyStackException();
         Node last = stack.getLastNode();
         stack.removeLast();
         return (T) last.getValue();
@@ -47,5 +48,10 @@ public class Stack<T> {
 
         if (position != -1) return stack.length - position;
         return -1;
+    }
+
+    @Override
+    public String toString() {
+        return stack.toString();
     }
 }
