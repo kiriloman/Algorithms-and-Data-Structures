@@ -243,7 +243,13 @@ public class LinkedListTest {
     }
 
     @Test
-    public void whenReversingLinkedListShouldBeReversed() {
+    public void whenReversingEmpyLinkedListShouldBeReversed() {
+        list.reverse();
+        Assert.assertEquals("{}", list.toString());
+    }
+
+    @Test
+    public void whenReversingNonEmpyLinkedListShouldBeReversed() {
         list.add(1);
         list.add(2);
         list.add(3);

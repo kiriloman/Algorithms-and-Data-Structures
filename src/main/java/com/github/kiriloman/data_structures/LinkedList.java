@@ -12,6 +12,7 @@ public class LinkedList<T> {
     }
 
     public void reverse() {
+        if (root == null) return;
         Node prev;
         Node curr = root;
         Node next = curr.getNext();

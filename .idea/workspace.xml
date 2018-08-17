@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d722025b-31f1-4c1e-a8c4-e9da82284c79" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/github/kiriloman/data_structures/LinkedList.class" afterPath="$PROJECT_DIR$/out/production/classes/com/github/kiriloman/data_structures/LinkedList.class" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/github/kiriloman/data_structures/LinkedListTest.class" afterPath="$PROJECT_DIR$/out/test/classes/com/github/kiriloman/data_structures/LinkedListTest.class" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/LinkedList.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/LinkedList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/Stack.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/Stack.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/LinkedListTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/LinkedListTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,8 +69,8 @@
       <file leaf-file-name="LinkedListTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/LinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="251" column="59" lean-forward="false" selection-start-line="251" selection-start-column="59" selection-end-line="251" selection-end-column="59" />
+            <state relative-caret-position="2160">
+              <caret line="247" column="30" lean-forward="false" selection-start-line="247" selection-start-column="30" selection-end-line="247" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -77,15 +79,15 @@
       <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="76">
+              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
               <folding>
-                <element signature="e#793#794#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#3307#3308#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
                 <element signature="e#3341#3342#0" expanded="true" />
+                <element signature="e#3375#3376#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +96,8 @@
       <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+            <state relative-caret-position="252">
+              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="25" />
               <folding>
                 <element signature="e#186#187#0" expanded="true" />
                 <element signature="e#228#229#0" expanded="true" />
@@ -447,9 +449,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/ArrayTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/QueueTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/LinkedListTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/Stack.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/LinkedListTest.java" />
       </list>
     </option>
   </component>
@@ -609,7 +611,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest.whenReversingLinkedListShouldBeReversed">
+  <component name="RunManager" selected="JUnit.LinkedListTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -825,9 +827,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedListTest.whenReversingLinkedListShouldBeReversed" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListTest.whenAddingTwoNonEmptyLinkedListsReturnTheirUnion" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedListTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedListTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListTest.whenReversingLinkedListShouldBeReversed" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedListTest.whenAddingTwoNonEmptyLinkedListsReturnTheirUnion" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayTest.whenAddingNonEmptyArrayToAnEmptyArrayReturnTheAddedArray" />
       </list>
@@ -850,19 +852,13 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayTest - 2018.03.14 at 20h 59m 58s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayTest - 2018.03.14 at 21h 00m 30s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayTest - 2018.03.14 at 21h 01m 25s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ArrayTest - 2018.03.14 at 21h 01m 32s.xml">
       <configuration name="ArrayTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedListTest - 2018.08.17 at 16h 35m 20s.xml">
+      <configuration name="LinkedListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest - 2018.08.17 at 17h 28m 38s.xml">
       <configuration name="LinkedListTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedListTest_whenAddingTwoNonEmptyLinkedListsReturnTheirUnion - 2018.08.17 at 17h 22m 29s.xml">
@@ -880,6 +876,12 @@
     <history-entry file="LinkedListTest_whenReversingLinkedListShouldBeReversed - 2018.08.17 at 17h 25m 30s.xml">
       <configuration name="LinkedListTest.whenReversingLinkedListShouldBeReversed" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LinkedListTest_whenReversingLinkedListShouldBeReversed - 2018.08.17 at 17h 27m 12s.xml">
+      <configuration name="LinkedListTest.whenReversingLinkedListShouldBeReversed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_whenReversingLinkedListShouldBeReversed - 2018.08.17 at 17h 27m 56s.xml">
+      <configuration name="LinkedListTest.whenReversingLinkedListShouldBeReversed" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1360" height="772" extended-state="6" />
@@ -894,7 +896,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2867868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2867868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -905,7 +907,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -967,12 +969,12 @@
         <state relative-caret-position="468">
           <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1005,12 +1007,12 @@
         <state relative-caret-position="468">
           <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1043,12 +1045,12 @@
         <state relative-caret-position="577">
           <caret line="60" column="9" lean-forward="false" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1081,12 +1083,12 @@
         <state relative-caret-position="1008">
           <caret line="60" column="9" lean-forward="false" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1111,12 +1113,12 @@
         <state relative-caret-position="36">
           <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1300,19 +1302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding>
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1328,25 +1317,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/kiriloman/data_structures/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="76">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/kiriloman/data_structures/LinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="251" column="59" lean-forward="false" selection-start-line="251" selection-start-column="59" selection-end-line="251" selection-end-column="59" />
+        <state relative-caret-position="2160">
+          <caret line="247" column="30" lean-forward="false" selection-start-line="247" selection-start-column="30" selection-end-line="247" selection-end-column="30" />
           <folding />
         </state>
       </provider>
