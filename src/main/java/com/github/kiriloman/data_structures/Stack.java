@@ -33,7 +33,8 @@ public class Stack<T> {
 
     public int search(Object o) {
         for (int i = 0; i < stack.length; i++) {
-            if (stack.)
+            //if (stack.)
         }
+        return 0;
     }
 }

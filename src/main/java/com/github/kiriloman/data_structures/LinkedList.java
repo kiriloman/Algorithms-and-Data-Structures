@@ -11,6 +11,21 @@ public class LinkedList<T> {
         this.length = 0;
     }
 
+    public void reverse() {
+        Node prev;
+        Node curr = root;
+        Node next = curr.getNext();
+        while (next != null) {
+            prev = curr;
+            curr = next;
+            next = next.getNext();
+            curr.setNext(prev);
+        }
+        last = root;
+        last.setNext(null);
+        root = curr;
+    }
+
     public Node getLastNode() {
         Node aux = root;
         while (aux.getNext() != null) {

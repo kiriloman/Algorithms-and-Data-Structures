@@ -3,11 +3,11 @@ package com.github.kiriloman.data_structures;
 import org.junit.*;
 
 public class LinkedListTest {
-    private LinkedList<Integer> array;
+    private LinkedList<Integer> list;
 
     @Before
     public void setUp() {
-        this.array = new LinkedList<>();
+        this.list = new LinkedList<>();
     }
 
     @After
@@ -17,196 +17,196 @@ public class LinkedListTest {
 
     @Test(expected = NullPointerException.class)
     public void whenAddingNullShouldReturnException() {
-        array.add((Integer) null);
+        list.add((Integer) null);
     }
 
     @Test
     public void whenValueIsAddedToLinkedListItsLengthIncrements() {
-        array.add(1);
-        Assert.assertEquals(1, array.length);
+        list.add(1);
+        Assert.assertEquals(1, list.length);
     }
 
     @Test
     public void whenGettingValueLinkedListShouldReturnValueAtIndex() {
-        array.add(1);
-        array.add(2);
-        array.add(3);
-        Assert.assertEquals(Integer.valueOf(2), array.get(1));
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        Assert.assertEquals(Integer.valueOf(2), list.get(1));
     }
 
     @Test(expected = NullPointerException.class)
     public void whenGettingNullIndexShouldReturnException() {
-        array.get(null);
+        list.get(null);
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void whenGettingValueWithNegativeIndexLinkedListShouldReturnException() {
-        array.add(1);
-        array.get(-1);
+        list.add(1);
+        list.get(-1);
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void whenGettingValueWithIndexLargerOrEqualToLengthLinkedListShouldReturnException() {
-        array.add(1);
-        array.add(2);
-        array.add(3);
-        array.get(3);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.get(3);
     }
 
     @Test
     public void whenUsingToStringOnEmptyLinkedListItReturnsEmpty() {
-        Assert.assertEquals("{}", array.toString());
+        Assert.assertEquals("{}", list.toString());
     }
 
     @Test
     public void whenUsingToStringOnNonEmptyLinkedListItReturnsItsContent() {
-        array.add(1);
-        array.add(2);
-        array.add(3);
-        Assert.assertEquals("{1, 2, 3}", array.toString());
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        Assert.assertEquals("{1, 2, 3}", list.toString());
     }
 
     @Test
     public void whenDestroyingLinkedListItsLengthShouldBeZeroAndShouldHaveNoContent() {
-        array.add(1);
-        array.destroy();
-        Assert.assertEquals(0, array.length);
-        Assert.assertEquals("{}", array.toString());
+        list.add(1);
+        list.destroy();
+        Assert.assertEquals(0, list.length);
+        Assert.assertEquals("{}", list.toString());
     }
 
     @Test
     public void whenLinkedListIsDestroyedItShouldBeEmpty() {
-        array.destroy();
-        Assert.assertTrue(array.isEmpty());
+        list.destroy();
+        Assert.assertTrue(list.isEmpty());
     }
 
     @Test
     public void whenLinkedListIsInitializedItShouldBeEmpty() {
-        Assert.assertTrue(array.isEmpty());
+        Assert.assertTrue(list.isEmpty());
     }
 
     @Test
     public void whenLinkedListHasElementsItShouldNotBeEmpty() {
-        array.add(1);
-        Assert.assertFalse(array.isEmpty());
+        list.add(1);
+        Assert.assertFalse(list.isEmpty());
     }
 
     @Test
     public void whenLinkedListIsEmptyLengthIsZero() {
-        Assert.assertTrue(array.length == 0);
+        Assert.assertTrue(list.length == 0);
     }
 
     @Test
     public void whenLinkedListIsNotEmptyLengthIsNotZero() {
-        array.add(1);
-        Assert.assertFalse(array.length == 0);
+        list.add(1);
+        Assert.assertFalse(list.length == 0);
     }
 
     @Test(expected = NullPointerException.class)
     public void whenRemovingNullIndexShouldReturnException() {
-        array.remove(null);
+        list.remove(null);
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void whenRemovingNegativeIndexShouldReturnException() {
-        array.remove(-1);
+        list.remove(-1);
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void whenRemovingIndexLargerOrEqualToLengthReturnException() {
-        array.add(3);
-        array.remove(1);
+        list.add(3);
+        list.remove(1);
     }
 
     @Test
     public void whenRemovingLegalIndexTheValueIsSuccessfullyRemoved() {
-        array.add(1);
-        array.remove(0);
-        Assert.assertEquals("{}", array.toString());
+        list.add(1);
+        list.remove(0);
+        Assert.assertEquals("{}", list.toString());
 
-        array.add(1);
-        array.add(2);
-        array.add(3);
-        array.remove(2);
-        Assert.assertEquals("{1, 2}", array.toString());
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.remove(2);
+        Assert.assertEquals("{1, 2}", list.toString());
     }
 
     @Test
     public void whenRemovingLegalIndexLengthShouldDecrement() {
-        array.add(1);
-        array.add(1);
-        array.add(1);
-        int l = array.length;
-        array.remove(2);
-        Assert.assertEquals(l - 1, array.length);
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        int l = list.length;
+        list.remove(2);
+        Assert.assertEquals(l - 1, list.length);
     }
 
     @Test(expected = NullPointerException.class)
     public void whenRemovingFirstFromAnEmptyLinkedListReturnException() {
-        array.removeFirst();
+        list.removeFirst();
     }
 
     @Test
     public void whenRemovingFirstFromNonEmptyLinkedListReturnLinkedListWithoutFirst() {
-        array.add(1);
-        array.removeFirst();
-        Assert.assertEquals("{}", array.toString());
+        list.add(1);
+        list.removeFirst();
+        Assert.assertEquals("{}", list.toString());
 
-        array.add(1);
-        array.add(2);
-        array.removeFirst();
-        Assert.assertEquals("{2}", array.toString());
+        list.add(1);
+        list.add(2);
+        list.removeFirst();
+        Assert.assertEquals("{2}", list.toString());
     }
 
     @Test
     public void whenRemovingFirstFromNonEmptyLinkedListLengthDecrements() {
-        array.add(1);
-        array.add(2);
-        int l = array.length;
-        array.removeFirst();
-        Assert.assertEquals(l - 1, array.length);
+        list.add(1);
+        list.add(2);
+        int l = list.length;
+        list.removeFirst();
+        Assert.assertEquals(l - 1, list.length);
     }
 
     @Test(expected = NullPointerException.class)
     public void whenRemovingLastFromAnEmptyLinkedListReturnException() {
-        array.removeLast();
+        list.removeLast();
     }
 
     @Test
     public void whenRemovingLastFromNonEmptyLinkedListReturnLinkedListWithoutLast() {
-        array.add(1);
-        array.removeLast();
-        Assert.assertEquals("{}", array.toString());
+        list.add(1);
+        list.removeLast();
+        Assert.assertEquals("{}", list.toString());
 
-        array.add(1);
-        array.add(2);
-        array.removeLast();
-        Assert.assertEquals("{1}", array.toString());
+        list.add(1);
+        list.add(2);
+        list.removeLast();
+        Assert.assertEquals("{1}", list.toString());
     }
 
     @Test
     public void whenRemovingLastFromNonEmptyLinkedListLengthDecrements() {
-        array.add(1);
-        array.add(2);
-        array.add(3);
-        int l = array.length;
-        array.removeLast();
-        Assert.assertEquals(l - 1, array.length);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        int l = list.length;
+        list.removeLast();
+        Assert.assertEquals(l - 1, list.length);
     }
 
     @Test(expected = NullPointerException.class)
     public void whenAddingNullLinkedListThrowException() {
-        array.add((LinkedList) null);
+        list.add((LinkedList) null);
     }
 
     @Test
     public void whenAddingEmptyLinkedListReturnOriginalLinkedList() {
         LinkedList<Integer> emptyLinkedList = new LinkedList<>();
-        array.add(1);
-        array.add(2);
-        array.add(3);
-        array.add(emptyLinkedList);
-        Assert.assertEquals("{1, 2, 3}", array.toString());
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(emptyLinkedList);
+        Assert.assertEquals("{1, 2, 3}", list.toString());
     }
 
     @Test
@@ -215,11 +215,11 @@ public class LinkedListTest {
         other.add(2);
         other.add(6);
 
-        array.add(1);
-        array.add(3);
-        array.add(2);
-        array.add(other);
-        Assert.assertEquals(5, array.length);
+        list.add(1);
+        list.add(3);
+        list.add(2);
+        list.add(other);
+        Assert.assertEquals(5, list.length);
     }
 
     @Test
@@ -227,8 +227,8 @@ public class LinkedListTest {
         LinkedList<Integer> other = new LinkedList<>();
         other.add(1);
         other.add(2);
-        array.add(other);
-        Assert.assertEquals("{1, 2}", array.toString());
+        list.add(other);
+        Assert.assertEquals("{1, 2}", list.toString());
     }
 
     @Test
@@ -236,9 +236,19 @@ public class LinkedListTest {
         LinkedList<Integer> other = new LinkedList<>();
         other.add(1);
         other.add(2);
-        array.add(5);
-        array.add(6);
-        array.add(other);
-        Assert.assertEquals("{5, 6, 1, 2}", array.toString());
+        list.add(5);
+        list.add(6);
+        list.add(other);
+        Assert.assertEquals("{5, 6, 1, 2}", list.toString());
+    }
+
+    @Test
+    public void whenReversingLinkedListShouldBeReversed() {
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.reverse();
+        Assert.assertEquals("{4, 3, 2, 1}", list.toString());
     }
 }
