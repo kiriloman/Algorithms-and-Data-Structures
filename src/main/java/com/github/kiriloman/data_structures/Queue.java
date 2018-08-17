@@ -1,5 +1,7 @@
 package com.github.kiriloman.data_structures;
 
+import java.util.NoSuchElementException;
+
 //FIFO Queue
 public class Queue<T> {
     private final int LIMIT;
@@ -22,8 +24,11 @@ public class Queue<T> {
         return true;
     }
 
-    public void remove() {
-
+    public T remove() {
+        if (queue.length < 1) throw new NoSuchElementException();
+        Node first = queue.getRoot();
+        queue.removeFirst();
+        return (T) first.getValue();
     }
 
     public T element() {
