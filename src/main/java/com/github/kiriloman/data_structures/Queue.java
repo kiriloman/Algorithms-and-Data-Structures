@@ -32,8 +32,8 @@ public class Queue<T> {
     }
 
     public T element() {
-
-        return null;
+        if (queue.length < 1) throw new NoSuchElementException();
+        return (T) queue.getRoot().getValue();
     }
 
     public void offer(T element) {
