@@ -2,12 +2,12 @@ package com.github.kiriloman.data_structures;
 
 import org.junit.*;
 
-public class ArrayTest {
-    private Array<Integer> array;
+public class LinkedListTest {
+    private LinkedList<Integer> array;
 
     @Before
     public void setUp() {
-        this.array = new Array<>();
+        this.array = new LinkedList<>();
     }
 
     @After
@@ -21,13 +21,13 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenValueIsAddedToArrayItsLengthIncrements() {
+    public void whenValueIsAddedToLinkedListItsLengthIncrements() {
         array.add(1);
         Assert.assertEquals(1, array.length);
     }
 
     @Test
-    public void whenGettingValueArrayShouldReturnValueAtIndex() {
+    public void whenGettingValueLinkedListShouldReturnValueAtIndex() {
         array.add(1);
         array.add(2);
         array.add(3);
@@ -40,13 +40,13 @@ public class ArrayTest {
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
-    public void whenGettingValueWithNegativeIndexArrayShouldReturnException() {
+    public void whenGettingValueWithNegativeIndexLinkedListShouldReturnException() {
         array.add(1);
         array.get(-1);
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
-    public void whenGettingValueWithIndexLargerOrEqualToLengthArrayShouldReturnException() {
+    public void whenGettingValueWithIndexLargerOrEqualToLengthLinkedListShouldReturnException() {
         array.add(1);
         array.add(2);
         array.add(3);
@@ -54,12 +54,12 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenUsingToStringOnEmptyArrayItReturnsEmpty() {
+    public void whenUsingToStringOnEmptyLinkedListItReturnsEmpty() {
         Assert.assertEquals("{}", array.toString());
     }
 
     @Test
-    public void whenUsingToStringOnNonEmptyArrayItReturnsItsContent() {
+    public void whenUsingToStringOnNonEmptyLinkedListItReturnsItsContent() {
         array.add(1);
         array.add(2);
         array.add(3);
@@ -67,7 +67,7 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenDestroyingArrayItsLengthShouldBeZeroAndShouldHaveNoContent() {
+    public void whenDestroyingLinkedListItsLengthShouldBeZeroAndShouldHaveNoContent() {
         array.add(1);
         array.destroy();
         Assert.assertEquals(0, array.length);
@@ -75,29 +75,29 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenArrayIsDestroyedItShouldBeEmpty() {
+    public void whenLinkedListIsDestroyedItShouldBeEmpty() {
         array.destroy();
         Assert.assertTrue(array.isEmpty());
     }
 
     @Test
-    public void whenArrayIsInitializedItShouldBeEmpty() {
+    public void whenLinkedListIsInitializedItShouldBeEmpty() {
         Assert.assertTrue(array.isEmpty());
     }
 
     @Test
-    public void whenArrayHasElementsItShouldNotBeEmpty() {
+    public void whenLinkedListHasElementsItShouldNotBeEmpty() {
         array.add(1);
         Assert.assertFalse(array.isEmpty());
     }
 
     @Test
-    public void whenArrayIsEmptyLengthIsZero() {
+    public void whenLinkedListIsEmptyLengthIsZero() {
         Assert.assertTrue(array.length == 0);
     }
 
     @Test
-    public void whenArrayIsNotEmptyLengthIsNotZero() {
+    public void whenLinkedListIsNotEmptyLengthIsNotZero() {
         array.add(1);
         Assert.assertFalse(array.length == 0);
     }
@@ -142,12 +142,12 @@ public class ArrayTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void whenRemovingFirstFromAnEmptyArrayReturnException() {
+    public void whenRemovingFirstFromAnEmptyLinkedListReturnException() {
         array.removeFirst();
     }
 
     @Test
-    public void whenRemovingFirstFromNonEmptyArrayReturnArrayWithoutFirst() {
+    public void whenRemovingFirstFromNonEmptyLinkedListReturnLinkedListWithoutFirst() {
         array.add(1);
         array.removeFirst();
         Assert.assertEquals("{}", array.toString());
@@ -159,7 +159,7 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenRemovingFirstFromNonEmptyArrayLengthDecrements() {
+    public void whenRemovingFirstFromNonEmptyLinkedListLengthDecrements() {
         array.add(1);
         array.add(2);
         int l = array.length;
@@ -168,12 +168,12 @@ public class ArrayTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void whenRemovingLastFromAnEmptyArrayReturnException() {
+    public void whenRemovingLastFromAnEmptyLinkedListReturnException() {
         array.removeLast();
     }
 
     @Test
-    public void whenRemovingLastFromNonEmptyArrayReturnArrayWithoutLast() {
+    public void whenRemovingLastFromNonEmptyLinkedListReturnLinkedListWithoutLast() {
         array.add(1);
         array.removeLast();
         Assert.assertEquals("{}", array.toString());
@@ -185,7 +185,7 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenRemovingLastFromNonEmptyArrayLengthDecrements() {
+    public void whenRemovingLastFromNonEmptyLinkedListLengthDecrements() {
         array.add(1);
         array.add(2);
         array.add(3);
@@ -195,23 +195,23 @@ public class ArrayTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void whenAddingNullArrayThrowException() {
-        array.add((Array) null);
+    public void whenAddingNullLinkedListThrowException() {
+        array.add((LinkedList) null);
     }
 
     @Test
-    public void whenAddingEmptyArrayReturnOriginalArray() {
-        Array<Integer> emptyArray = new Array<>();
+    public void whenAddingEmptyLinkedListReturnOriginalLinkedList() {
+        LinkedList<Integer> emptyLinkedList = new LinkedList<>();
         array.add(1);
         array.add(2);
         array.add(3);
-        array.add(emptyArray);
+        array.add(emptyLinkedList);
         Assert.assertEquals("{1, 2, 3}", array.toString());
     }
 
     @Test
-    public void whenAddingArrayLengthOfOriginalIncrementsExactlyTheLengthOfAddedArray() {
-        Array<Integer> other = new Array<>();
+    public void whenAddingLinkedListLengthOfOriginalIncrementsExactlyTheLengthOfAddedLinkedList() {
+        LinkedList<Integer> other = new LinkedList<>();
         other.add(2);
         other.add(6);
 
@@ -223,8 +223,8 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenAddingNonEmptyArrayToAnEmptyArrayReturnTheAddedArray() {
-        Array<Integer> other = new Array<>();
+    public void whenAddingNonEmptyLinkedListToAnEmptyLinkedListReturnTheAddedLinkedList() {
+        LinkedList<Integer> other = new LinkedList<>();
         other.add(1);
         other.add(2);
         array.add(other);
@@ -232,8 +232,8 @@ public class ArrayTest {
     }
 
     @Test
-    public void whenAddingTwoNonEmptyArraysReturnTheirUnion() {
-        Array<Integer> other = new Array<>();
+    public void whenAddingTwoNonEmptyLinkedListsReturnTheirUnion() {
+        LinkedList<Integer> other = new LinkedList<>();
         other.add(1);
         other.add(2);
         array.add(5);
