@@ -7,32 +7,12 @@ import static org.junit.Assert.*;
 
 public class QueueTest {
 
+    private Queue<Integer> unlimitedQueue;
+    private Queue<Integer> limitedQueue;
+
     @Before
     public void setUp() throws Exception {
-        Queue<Integer> queue = new Queue<>();
-    }
-
-    @Test
-    public void add() {
-    }
-
-    @Test
-    public void remove() {
-    }
-
-    @Test
-    public void element() {
-    }
-
-    @Test
-    public void offer() {
-    }
-
-    @Test
-    public void poll() {
-    }
-
-    @Test
-    public void peek() {
+        unlimitedQueue = new Queue<>();
+        limitedQueue = new Queue<>(2);
     }
 }
