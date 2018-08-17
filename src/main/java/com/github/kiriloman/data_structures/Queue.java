@@ -49,7 +49,8 @@ public class Queue<T> {
         return (T) first.getValue();
     }
 
-    public void peek() {
-
+    public T peek() {
+        if (queue.length < 1) return null;
+        return (T) queue.getRoot().getValue();
     }
 }
