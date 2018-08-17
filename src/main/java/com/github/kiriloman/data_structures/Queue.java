@@ -42,8 +42,11 @@ public class Queue<T> {
         return true;
     }
 
-    public void poll() {
-
+    public T poll() {
+        if (queue.length < 1) return null;
+        Node first = queue.getRoot();
+        queue.removeFirst();
+        return (T) first.getValue();
     }
 
     public void peek() {
