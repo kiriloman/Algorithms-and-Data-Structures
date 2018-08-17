@@ -32,9 +32,20 @@ public class Stack<T> {
     }
 
     public int search(Object o) {
-        for (int i = 0; i < stack.length; i++) {
-            //if (stack.)
+        if (stack.isEmpty()) return -1;
+
+        int position = -1;
+        int counter = 0;
+        Node curr = stack.getRoot();
+
+        while (curr != null) {
+            if (curr.getValue().equals(o))
+                position = counter;
+            curr = curr.getNext();
+            counter++;
         }
-        return 0;
+
+        if (position != -1) return stack.length - position;
+        return -1;
     }
 }
