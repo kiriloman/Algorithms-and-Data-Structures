@@ -36,8 +36,10 @@ public class Queue<T> {
         return (T) queue.getRoot().getValue();
     }
 
-    public void offer(T element) {
-
+    public boolean offer(T element) {
+        if (queue.length >= LIMIT) return false;
+        queue.add(element);
+        return true;
     }
 
     public void poll() {
