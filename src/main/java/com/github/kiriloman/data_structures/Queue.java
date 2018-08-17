@@ -3,21 +3,23 @@ package com.github.kiriloman.data_structures;
 //FIFO Queue
 public class Queue<T> {
     private final int LIMIT;
-    private int length;
+    private LinkedList<T> queue;
 
     public Queue() {
         LIMIT = Integer.MAX_VALUE;
-        length = 0;
+        queue = new LinkedList<>();
     }
 
     public Queue(Integer limit) {
         if (limit < 0) throw new ArithmeticException();
         LIMIT = limit;
-        length = 0;
+        queue = new LinkedList<>();
     }
 
-    public void add(T element) {
-        
+    public boolean add(T element) {
+        if (queue.length >= LIMIT) throw new IllegalStateException();
+        queue.add(element);
+        return true;
     }
 
     public void remove() {
