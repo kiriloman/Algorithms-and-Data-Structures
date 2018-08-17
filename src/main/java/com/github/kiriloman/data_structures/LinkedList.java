@@ -1,11 +1,11 @@
 package com.github.kiriloman.data_structures;
 
-public class Array<T> {
+public class LinkedList<T> {
     public int length;
     private Node root;
     private Node last;
 
-    public Array() {
+    public LinkedList() {
         this.root = null;
         this.last = null;
         this.length = 0;
@@ -41,7 +41,7 @@ public class Array<T> {
         length++;
     }
 
-    public void add(Array other) {
+    public void add(LinkedList other) {
         if (other == null) throw new NullPointerException();
         int otherLength = other.length;
         if (otherLength == 0) return;
