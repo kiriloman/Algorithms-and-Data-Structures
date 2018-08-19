@@ -22,13 +22,15 @@ public class QueueTest {
     @Test
     public void whenAddingAnElementToAnUnlimitedQueueItShouldBeAdded() {
         unlimitedQueue.add(1);
-        Assert.assertEquals("{1}", unlimitedQueue.toString());
+        unlimitedQueue.add(2);
+        Assert.assertEquals("{1, 2}", unlimitedQueue.toString());
     }
 
     @Test
     public void whenAddingAnElementToALimitedQueueWithSpaceItShouldBeAdded() {
         limitedQueue.add(1);
-        Assert.assertEquals("{1}", limitedQueue.toString());
+        limitedQueue.add(2);
+        Assert.assertEquals("{1, 2}", limitedQueue.toString());
     }
 
     @Test(expected = IllegalStateException.class)
@@ -41,13 +43,15 @@ public class QueueTest {
     @Test
     public void whenOfferingAnElementToAnUnlimitedQueueItShouldBeAdded() {
         unlimitedQueue.offer(1);
-        Assert.assertEquals("{1}", unlimitedQueue.toString());
+        unlimitedQueue.offer(2);
+        Assert.assertEquals("{1, 2}", unlimitedQueue.toString());
     }
 
     @Test
     public void whenOfferingAnElementToALimitedQueueWithSpaceItShouldBeAdded() {
         limitedQueue.offer(1);
-        Assert.assertEquals("{1}", limitedQueue.toString());
+        limitedQueue.offer(2);
+        Assert.assertEquals("{1, 2}", limitedQueue.toString());
     }
 
     @Test
@@ -60,26 +64,30 @@ public class QueueTest {
     @Test
     public void whenRemovingTheHeadFromUnlimitedQueueItShouldBeRemoved() {
         unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
         unlimitedQueue.remove();
-        Assert.assertEquals("{}", unlimitedQueue.toString());
+        Assert.assertEquals("{2}", unlimitedQueue.toString());
     }
 
     @Test
     public void whenRemovingTheHeadFromLimitedQueueItShouldBeRemoved() {
         limitedQueue.add(1);
+        limitedQueue.add(2);
         limitedQueue.remove();
-        Assert.assertEquals("{}", limitedQueue.toString());
+        Assert.assertEquals("{2}", limitedQueue.toString());
     }
 
     @Test
     public void whenRemovingTheHeadFromUnlimitedQueueItShouldBeReturned() {
         unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
         Assert.assertEquals(Integer.valueOf(1), unlimitedQueue.remove());
     }
 
     @Test
     public void whenRemovingTheHeadFromLimitedQueueItShouldBeReturned() {
         limitedQueue.add(1);
+        limitedQueue.add(2);
         Assert.assertEquals(Integer.valueOf(1), limitedQueue.remove());
     }
 
@@ -91,26 +99,30 @@ public class QueueTest {
     @Test
     public void whenPollingTheHeadFromUnlimitedQueueItShouldBeRemoved() {
         unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
         unlimitedQueue.poll();
-        Assert.assertEquals("{}", unlimitedQueue.toString());
+        Assert.assertEquals("{2}", unlimitedQueue.toString());
     }
 
     @Test
     public void whenPollingTheHeadFromLimitedQueueItShouldBeRemoved() {
         limitedQueue.add(1);
+        limitedQueue.add(2);
         limitedQueue.poll();
-        Assert.assertEquals("{}", limitedQueue.toString());
+        Assert.assertEquals("{2}", limitedQueue.toString());
     }
 
     @Test
     public void whenPollingTheHeadFromUnlimitedQueueItShouldBeReturned() {
         unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
         Assert.assertEquals(Integer.valueOf(1), unlimitedQueue.poll());
     }
 
     @Test
     public void whenPollingTheHeadFromLimitedQueueItShouldBeReturned() {
         limitedQueue.add(1);
+        limitedQueue.add(2);
         Assert.assertEquals(Integer.valueOf(1), limitedQueue.poll());
     }
 
@@ -118,4 +130,6 @@ public class QueueTest {
     public void whenPollingTheHeadFromAnEmptyQueueThrowException() {
         unlimitedQueue.poll();
     }
+
+
 }
