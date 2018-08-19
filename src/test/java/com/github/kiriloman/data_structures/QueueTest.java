@@ -151,5 +151,23 @@ public class QueueTest {
         Assert.assertEquals("{1, 2}", unlimitedQueue.toString());
     }
 
-    
+    @Test
+    public void whenPeekingAnEmptyQueueReturnNull() {
+        Assert.assertEquals(null, unlimitedQueue.peek());
+    }
+
+    @Test
+    public void whenPeekingANonEmptyQueueReturnFirstElement() {
+        unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
+        Assert.assertEquals(Integer.valueOf(1), unlimitedQueue.peek());
+    }
+
+    @Test
+    public void whenPeekingANonEmptyQueueDoNotRemoveTheFirstElement() {
+        unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
+        unlimitedQueue.peek();
+        Assert.assertEquals("{1, 2}", unlimitedQueue.toString());
+    }
 }
