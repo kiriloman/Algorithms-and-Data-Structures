@@ -53,4 +53,9 @@ public class Queue<T> {
         if (queue.length < 1) return null;
         return (T) queue.getRoot().getValue();
     }
+
+    @Override
+    public String toString() {
+        return queue.toString();
+    }
 }
