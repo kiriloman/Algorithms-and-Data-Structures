@@ -87,4 +87,35 @@ public class QueueTest {
     public void whenRemovingTheHeadFromAnEmptyQueueThrowException() {
         unlimitedQueue.remove();
     }
+
+    @Test
+    public void whenPollingTheHeadFromUnlimitedQueueItShouldBeRemoved() {
+        unlimitedQueue.add(1);
+        unlimitedQueue.poll();
+        Assert.assertEquals("{}", unlimitedQueue.toString());
+    }
+
+    @Test
+    public void whenPollingTheHeadFromLimitedQueueItShouldBeRemoved() {
+        limitedQueue.add(1);
+        limitedQueue.poll();
+        Assert.assertEquals("{}", limitedQueue.toString());
+    }
+
+    @Test
+    public void whenPollingTheHeadFromUnlimitedQueueItShouldBeReturned() {
+        unlimitedQueue.add(1);
+        Assert.assertEquals(Integer.valueOf(1), unlimitedQueue.poll());
+    }
+
+    @Test
+    public void whenPollingTheHeadFromLimitedQueueItShouldBeReturned() {
+        limitedQueue.add(1);
+        Assert.assertEquals(Integer.valueOf(1), limitedQueue.poll());
+    }
+
+    @Test
+    public void whenPollingTheHeadFromAnEmptyQueueThrowException() {
+        unlimitedQueue.poll();
+    }
 }
