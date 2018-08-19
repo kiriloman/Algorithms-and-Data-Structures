@@ -131,5 +131,25 @@ public class QueueTest {
         unlimitedQueue.poll();
     }
 
+    @Test(expected = NoSuchElementException.class)
+    public void whenAskingForAnElementFromAnEmptyQueueThrowException() {
+        unlimitedQueue.element();
+    }
 
+    @Test
+    public void whenAskingForAnElementFromANonEmptyQueueReturnFirstElement() {
+        unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
+        Assert.assertEquals(Integer.valueOf(1), unlimitedQueue.element());
+    }
+
+    @Test
+    public void whenAskingForAnElementFromANonEmptyQueueDoNotRemoveTheFirstElement() {
+        unlimitedQueue.add(1);
+        unlimitedQueue.add(2);
+        unlimitedQueue.element();
+        Assert.assertEquals("{1, 2}", unlimitedQueue.toString());
+    }
+
+    
 }
