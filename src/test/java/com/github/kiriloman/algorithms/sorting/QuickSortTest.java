@@ -1,4 +1,4 @@
-package com.github.kiriloman.sorting;
+package com.github.kiriloman.algorithms.sorting;
 
 import org.junit.Assert;
 import org.junit.Test;
