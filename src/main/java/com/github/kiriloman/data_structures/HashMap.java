@@ -94,10 +94,6 @@ public class HashMap<K, V> {
         }
     }
 
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
     public int size() {
         return size;
     }
