@@ -6,8 +6,6 @@ import org.junit.Test;
 
 import java.util.NoSuchElementException;
 
-import static org.junit.Assert.*;
-
 public class QueueTest {
 
     private Queue<Integer> unlimitedQueue;
