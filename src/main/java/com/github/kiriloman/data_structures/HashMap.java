@@ -11,7 +11,7 @@ public class HashMap<K, V> {
         size = 0;
         buckets = new LinkedList[NUM_OF_BUCKETS];
         for (int i = 0; i < buckets.length; i++) {
-            buckets[i] = new LinkedList<Pair<K, V>>();
+            buckets[i] = new LinkedList<Pair>();
         }
     }
 
@@ -20,7 +20,7 @@ public class HashMap<K, V> {
         size = 0;
         buckets = new LinkedList[NUM_OF_BUCKETS];
         for (int i = 0; i < buckets.length; i++) {
-            buckets[i] = new LinkedList<Pair<K, V>>();
+            buckets[i] = new LinkedList<Pair>();
         }
     }
 
@@ -30,7 +30,7 @@ public class HashMap<K, V> {
 
     public void put(K key, V value) {
         int hash = hash(key);
-        Pair<K, V> pair = new Pair<>(key, value);
+        Pair pair = new Pair(key, value);
         for (int i = 0; i < buckets[hash].length; i++) {
             if (((Pair) buckets[hash].get(i)).getFirst().equals(key)) {
                 ((Pair) buckets[hash].get(i)).setSecond(value);
@@ -84,9 +84,11 @@ public class HashMap<K, V> {
     public void remove(K key, V value) {
         int hash = hash(key);
         for (int i = 0; i < buckets[hash].length; i++) {
-            if (((Pair) buckets[hash].get(i)).getFirst().equals(key) && ((Pair) buckets[hash].get(i)).getSecond().equals(value)) {
-                buckets[hash].remove(i);
-                size--;
+            if (((Pair) buckets[hash].get(i)).getFirst().equals(key)) {
+                if (((Pair) buckets[hash].get(i)).getSecond().equals(value)) {
+                    buckets[hash].remove(i);
+                    size--;
+                }
                 return;
             }
         }
