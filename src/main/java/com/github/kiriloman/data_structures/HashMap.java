@@ -84,7 +84,7 @@ public class HashMap<K, V> {
     public void remove(K key, V value) {
         int hash = hash(key);
         for (int i = 0; i < buckets[hash].length; i++) {
-            if (((Pair) buckets[hash].get(i)).getFirst().equals(key) && ((Pair) buckets[hash].get(i)).getSecond().equals(value))) {
+            if (((Pair) buckets[hash].get(i)).getFirst().equals(key) && ((Pair) buckets[hash].get(i)).getSecond().equals(value)) {
                 buckets[hash].remove(i);
                 size--;
                 return;
