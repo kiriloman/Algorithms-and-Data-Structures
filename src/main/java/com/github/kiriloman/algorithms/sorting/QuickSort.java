@@ -1,4 +1,4 @@
-package com.github.kiriloman.sorting;
+package com.github.kiriloman.algorithms.sorting;
 
 /*
  * Given an Integer array order it using QuickSort algorithm.
