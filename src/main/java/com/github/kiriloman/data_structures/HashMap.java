@@ -2,18 +2,21 @@ package com.github.kiriloman.data_structures;
 
 public class HashMap<K, V> {
 
-    private final int SIZE;
+    private final int NUM_OF_BUCKETS;
     private LinkedList[] buckets;
+    private int size;
 
     HashMap() {
-        SIZE = 32;
-        buckets = new LinkedList[SIZE];
+        NUM_OF_BUCKETS = 32;
+        size = 0;
+        buckets = new LinkedList[NUM_OF_BUCKETS];
         initializeBuckets(buckets);
     }
 
-    HashMap(int size) {
-        SIZE = size;
-        buckets = new LinkedList[SIZE];
+    HashMap(int numberOfBuckets) {
+        NUM_OF_BUCKETS = numberOfBuckets;
+        size = 0;
+        buckets = new LinkedList[NUM_OF_BUCKETS];
         initializeBuckets(buckets);
     }
 
@@ -24,7 +27,7 @@ public class HashMap<K, V> {
     }
 
     private int hash(K key) {
-        return key.hashCode() % SIZE;
+        return key.hashCode() % NUM_OF_BUCKETS;
     }
 
     public void put(K key, V value) {
@@ -37,6 +40,7 @@ public class HashMap<K, V> {
             }
         }
         buckets[hash].add(pair);
+        size++;
     }
 
     public V get(K key) {
@@ -47,5 +51,9 @@ public class HashMap<K, V> {
             }
         }
         return null;
+    }
+
+    public int size() {
+        return size;
     }
 }
